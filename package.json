@@ -5,13 +5,14 @@
   "scripts": {
     "prepare": "husky install",
     "preinstall": "husky install",
-    "dev": "next dev",
-    "build": "next build",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
     "start": "next start",
-    "lint": "next lint",
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "check-types": "tsc --noEmit"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.32.0",
@@ -59,6 +60,8 @@
     "prettier": "^3.2.5",
     "storybook": "^8.0.9",
     "styled-reset": "^4.5.2",
+    "turbo": "^2.0.6",
     "typescript": "^5"
-  }
+  },
+  "packageManager": "pnpm@9.0.0"
 }
