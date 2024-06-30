@@ -7,6 +7,7 @@
     "preinstall": "husky install",
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "dev:web": "turbo dev --filter=web",
     "lint": "turbo run lint",
     "start": "next start",
     "lint:fix": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
