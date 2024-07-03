@@ -1,4 +1,4 @@
-import type { IconComponentMap } from '@/components/Icon';
+import type { IconComponentMap } from '../Icon';
 
 export type NavItemType = {
   text: string;

@@ -1,10 +1,10 @@
 import { usePathname } from 'next/navigation';
 import styled from 'styled-components';
 
-import type { NavItemType } from '@/constants/bottomNav';
-import theme from '@/styles/theme';
-
+import theme from '../../styles/theme';
 import Icon from '../Icon';
+
+import type { NavItemType } from './index.constants';
 
 type NavItemProps = {
   selected?: boolean;
