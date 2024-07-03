@@ -3,8 +3,9 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@makers/ui/*": ["./*"],
+      "~/*": ["./*"]
     }
   },
-  "include": ["src"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "@types"],
 }
