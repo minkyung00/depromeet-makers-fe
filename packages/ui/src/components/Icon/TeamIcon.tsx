@@ -1,5 +1,3 @@
-import React from 'react';
-
 import type { IconComponentProps } from '.';
 
 export function TeamIcon({ ...props }: IconComponentProps) {
