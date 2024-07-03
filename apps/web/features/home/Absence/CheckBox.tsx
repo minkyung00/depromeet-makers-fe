@@ -1,6 +1,5 @@
+import { Icon } from '@makers/ui';
 import styled from 'styled-components';
-
-import Icon from '@/components/Icon';
 
 interface CheckBoxProps {
   checkBoxCount: number;

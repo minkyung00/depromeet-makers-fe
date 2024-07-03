@@ -1,6 +1,5 @@
+import { Badge } from '@makers/ui';
 import styled from 'styled-components';
-
-import { Badge } from '@/components/Badge';
 
 import { CheckBox } from './CheckBox';
 

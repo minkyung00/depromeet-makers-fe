@@ -1,9 +1,7 @@
 import type { ComponentProps, PropsWithChildren } from 'react';
 import React from 'react';
+import { Button, Icon } from '@makers/ui';
 import styled from 'styled-components';
-
-import Button from '@/components/Button';
-import Icon from '@/components/Icon';
 
 interface Props {
   title: string;

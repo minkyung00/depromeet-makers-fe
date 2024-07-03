@@ -1,10 +1,7 @@
 import { useState } from 'react';
+import { BottomSheet, Icon } from '@makers/ui';
 import { domMax, LazyMotion } from 'framer-motion';
 import styled, { useTheme } from 'styled-components';
-
-import BottomSheet from '@/components/BottomSheet';
-import ChipLine from '@/components/Chip/ChipLine';
-import Icon from '@/components/Icon';
 
 const WEEK_COUNT = 16;
 const WEEK_LIST = Array.from({ length: WEEK_COUNT }).map((_, index) => index + 1);

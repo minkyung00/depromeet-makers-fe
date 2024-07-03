@@ -1,7 +1,6 @@
 import Link from 'next/link';
+import { Icon } from '@makers/ui';
 import styled from 'styled-components';
-
-import Icon from '@/components/Icon';
 
 export const RuleLink = () => {
   return (
