@@ -1,8 +1,8 @@
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
-import { COOKIE_KEY } from './constants/cookie';
-import { postAuthRefresh } from './hooks/apis/auth/useAuthRefresh';
+import { COOKIE_KEY } from '~/constants/cookie';
+import { postAuthRefresh } from '~/hooks/apis/auth/useAuthRefresh';
 
 export async function middleware(request: NextRequest) {
   const response = NextResponse.next();

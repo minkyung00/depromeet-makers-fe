@@ -2,8 +2,9 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import mixpanel from 'mixpanel-browser';
 
-import { isProduction } from '@/constants/environment';
-import { pageview } from '@/utils/gtag';
+import { pageview } from './gtag';
+
+import { isProduction } from '~/constants/environment';
 
 const usePageTrack = () => {
   const router = useRouter();
