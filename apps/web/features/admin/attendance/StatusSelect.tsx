@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useOutsideClick } from '@makers/lib';
+import { Icon } from '@makers/ui';
 import { AnimatePresence, m } from 'framer-motion';
 import styled, { useTheme } from 'styled-components';
 
-import Icon from '@/components/Icon';
-import { ATTENDANCE_STATUS, ATTENDANCE_STATUS_KR } from '@/constants/attendance';
-import { ATTENDANCE_STATUS_LIST } from '@/constants/attendance';
-import useOutsideClick from '@/hooks/useOutsideClick';
+import { ATTENDANCE_STATUS, ATTENDANCE_STATUS_KR } from '~/constants/attendance';
+import { ATTENDANCE_STATUS_LIST } from '~/constants/attendance';
 
 type DropdownPosition = 'top' | 'bottom';
 

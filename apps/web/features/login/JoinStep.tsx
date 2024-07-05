@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
 
-import { usePostLogin } from '@/hooks/apis/auth/usePostLogin';
-import { useSetDefaultPassCord } from '@/hooks/apis/auth/useSetDefaultPassCord';
-
 import LoginLayout from './LoginLayout';
 import PasswordInput from './PasswordInput';
+
+import { usePostLogin } from '~/hooks/apis/auth/usePostLogin';
+import { useSetDefaultPassCord } from '~/hooks/apis/auth/useSetDefaultPassCord';
 
 const PASSWORD_LENGTH = 6;
 

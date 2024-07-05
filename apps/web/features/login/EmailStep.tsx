@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-
-import Input from '@/components/Input';
-import { REGEX } from '@/constants/regex';
-import { getHasMember } from '@/hooks/apis/auth/useGetHasMember';
+import { Input } from '@makers/ui';
 
 import LoginLayout from './LoginLayout';
+
+import { REGEX } from '~/constants/regex';
+import { getHasMember } from '~/hooks/apis/auth/useGetHasMember';
 
 interface Props {
   onNext: (type: 'join' | 'login', email: string) => void;

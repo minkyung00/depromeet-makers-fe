@@ -1,9 +1,8 @@
 import React from 'react';
+import { getDateText } from '@makers/lib';
+import { Accordion, AccordionItem } from '@makers/ui';
+import { Badge } from '@makers/ui';
 import styled from 'styled-components';
-
-import { Accordion, AccordionItem } from '@/components/Accordion';
-import { Badge } from '@/components/Badge';
-import { getDateText } from '@/utils/date';
 
 import type { ScheduleType } from '../index.constants';
 

@@ -1,10 +1,9 @@
 import React from 'react';
+import type { IconComponentMap } from '@makers/ui';
+import { Icon } from '@makers/ui';
 import styled from 'styled-components';
 
-import type { AttendanceStatus } from '@/types/attendance';
-
-import type { IconComponentMap } from '../Icon';
-import Icon from '../Icon';
+import type { AttendanceStatus } from '~/types/attendance';
 
 export interface CheckedProps {
   week: number;

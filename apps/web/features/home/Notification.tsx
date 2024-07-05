@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 import { SnackBar } from '@/components/SnackBar';
-import { useGetNotification } from '@/hooks/apis/notification/useGetNotification';
-import { useReadNotifiaction } from '@/hooks/apis/notification/useReadNotification';
+
+import { useGetNotification } from '~/hooks/apis/notification/useGetNotification';
+import { useReadNotifiaction } from '~/hooks/apis/notification/useReadNotification';
 
 export const Notification = () => {
   const { data: notification } = useGetNotification();
