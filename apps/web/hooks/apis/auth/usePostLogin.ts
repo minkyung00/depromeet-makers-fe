@@ -4,7 +4,7 @@ import type { UseMutationOptions } from '@tanstack/react-query';
 import { useMutation } from '@tanstack/react-query';
 import Cookies from 'js-cookie';
 
-import { COOKIE_KEY } from '../../../../apps/web/constants/cookie';
+import { COOKIE_KEY } from '~/constants/cookie';
 
 interface PostLoginRequest {
   email: string;
