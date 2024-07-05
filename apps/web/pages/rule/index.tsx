@@ -1,8 +1,7 @@
+import { Header, theme } from '@makers/ui';
 import styled from 'styled-components';
 
-import { Header } from '@/components/Header';
-import { Metadata } from '@/components/Metadata';
-import theme from '@/styles/theme';
+import { Metadata } from '~/components/Metadata';
 
 // TODO: 추후 변경 필요
 

@@ -1,11 +1,11 @@
+import { isSameDate } from '@makers/lib';
+import { BottomNav } from '@makers/ui';
 import styled from 'styled-components';
 
-import { BottomNav } from '@/components/BottomNav';
-import { Metadata } from '@/components/Metadata';
-import { USER_NAV_ITEMS } from '@/constants/bottomNav';
-import ScheduleItem from '@/features/schedule/ScheduleItem';
-import { useGetSessionList } from '@/hooks/apis/sessions/useGetSessionList';
-import { isSameDate } from '@/utils/date';
+import { Metadata } from '~/components/Metadata';
+import { USER_NAV_ITEMS } from '~/constants/bottomNav';
+import ScheduleItem from '~/features/schedule/ScheduleItem';
+import { useGetSessionList } from '~/hooks/apis/sessions/useGetSessionList';
 
 function SchedulePage() {
   const today = new Date();

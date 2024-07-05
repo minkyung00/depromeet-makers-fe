@@ -1,22 +1,27 @@
+import { getDateText } from '@makers/lib';
+import { Badge, BottomNav } from '@makers/ui';
 import styled from 'styled-components';
 
-import { Badge } from '@/components/Badge';
-import { BottomNav } from '@/components/BottomNav';
-import { FAB } from '@/components/FAB';
-import { Metadata } from '@/components/Metadata';
-import { ATTENDANCE_STATUS, CURRENT_GENERATION } from '@/constants/attendance';
-import { USER_NAV_ITEMS } from '@/constants/bottomNav';
-import { TITLE } from '@/constants/home';
-import { Absence } from '@/features/home/Absence';
-import { Attendance } from '@/features/home/Attendance';
-import { Notification } from '@/features/home/Notification';
-import { RuleLink } from '@/features/home/RuleLink';
-import { useCheckIn } from '@/hooks/apis/attendance/useCheckIn';
-import { useGetAttendance } from '@/hooks/apis/attendance/useGetAttendance';
-import { useGetCheckIn } from '@/hooks/apis/attendance/useGetCheckIn';
-import { useGetSession } from '@/hooks/apis/sessions/useGetSession';
-import { useGetInfo } from '@/hooks/apis/user/useGetInfo';
-import { getDateText } from '@/utils/date';
+import { FAB } from '~/components/FAB';
+import { Metadata } from '~/components/Metadata';
+import { ATTENDANCE_STATUS, CURRENT_GENERATION } from '~/constants/attendance';
+import { TITLE } from '~/constants/home';
+import { Absence } from '~/features/home/Absence';
+import { Attendance } from '~/features/home/Attendance';
+import { Notification } from '~/features/home/Notification';
+import { RuleLink } from '~/features/home/RuleLink';
+import { useCheckIn } from '~/hooks/apis/attendance/useCheckIn';
+import { useGetAttendance } from '~/hooks/apis/attendance/useGetAttendance';
+import { useGetCheckIn } from '~/hooks/apis/attendance/useGetCheckIn';
+import { useGetSession } from '~/hooks/apis/sessions/useGetSession';
+import { useGetInfo } from '~/hooks/apis/user/useGetInfo';
+
+const USER_NAV_ITEMS = [
+  { text: '홈', icon: 'home', path: '/' },
+  { text: '일정', icon: 'calendar', path: '/schedule' },
+  // NOTE: 심사를 위해 임시 주석 처리
+  // { text: '마이페이지', icon: 'user', path: '/my' },
+] as const;
 
 const Home = () => {
   const { data: attendance } = useGetAttendance({ generation: CURRENT_GENERATION });

@@ -5,11 +5,11 @@ import styled from 'styled-components';
 import { BottomNav } from '@/components/BottomNav';
 import IconButton from '@/components/Button/IconButton';
 import Layout from '@/components/Layout';
-import { ATTENDANCE_STATUS } from '@/constants/attendance';
+import { ATTENDANCE_STATUS } from '../../../apps/web/constants/attendance';
 import { ADMIN_NAV_ITEMS } from '@/constants/bottomNav';
-import TeamSelect from '@/features/admin/attendance/TeamSelect';
-import UserItem from '@/features/admin/attendance/UserItem';
-import WeekSelect from '@/features/admin/attendance/WeekSelect';
+import TeamSelect from '../../../apps/web/features/admin/attendance/TeamSelect';
+import UserItem from '../../../apps/web/features/admin/attendance/UserItem';
+import WeekSelect from '../../../apps/web/features/admin/attendance/WeekSelect';
 import { useGetGroupAttendance } from '@/hooks/apis/attendance/useGetGroupAttendance';
 
 function AdminAttendancePage() {
