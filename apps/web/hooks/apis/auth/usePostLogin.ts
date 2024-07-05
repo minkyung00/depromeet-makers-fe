@@ -1,10 +1,10 @@
+import type { CustomError } from '@makers/api';
+import { api } from '@makers/api';
 import type { UseMutationOptions } from '@tanstack/react-query';
 import { useMutation } from '@tanstack/react-query';
 import Cookies from 'js-cookie';
 
-import type { CustomError } from '@/apis';
-import { api } from '@/apis';
-import { COOKIE_KEY } from '@/constants/cookie';
+import { COOKIE_KEY } from '../../../../apps/web/constants/cookie';
 
 interface PostLoginRequest {
   email: string;

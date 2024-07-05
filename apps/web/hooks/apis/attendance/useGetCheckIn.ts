@@ -1,8 +1,8 @@
+import type { CustomError } from '@makers/api';
+import { api } from '@makers/api';
 import type { UseQueryOptions } from '@tanstack/react-query';
 import { useQuery } from '@tanstack/react-query';
 
-import type { CustomError } from '@/apis';
-import { api } from '@/apis';
 import type { AttendanceStatus } from '@/types/attendance';
 
 interface CheckInResponse {

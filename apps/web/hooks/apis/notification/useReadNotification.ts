@@ -1,8 +1,7 @@
+import type { CustomError } from '@makers/api';
+import { api } from '@makers/api';
 import type { UseMutationOptions } from '@tanstack/react-query';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-
-import type { CustomError } from '@/apis';
-import { api } from '@/apis';
 
 interface NotifcationRequest {
   notificationId: string;

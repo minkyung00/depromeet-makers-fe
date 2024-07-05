@@ -17,6 +17,8 @@
     "typescript": "^5",
     "@makers/typescript-config": "workspace:*",
     "@makers/eslint-config": "workspace:*",
-    "@makers/ui": "workspace:*"
+    "@makers/ui": "workspace:*",
+    "@makers/api": "workspace:*",
+    "@makers/lib": "workspace:*"
   }
 }

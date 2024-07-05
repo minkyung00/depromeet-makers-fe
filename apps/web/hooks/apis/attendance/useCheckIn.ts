@@ -1,8 +1,8 @@
+import type { CustomError } from '@makers/api';
+import { api } from '@makers/api';
 import type { UseMutationOptions } from '@tanstack/react-query';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
-import type { CustomError } from '@/apis';
-import { api } from '@/apis';
 import { useSnackBar } from '@/components/SnackBar/useSnackBar';
 import { useGeolocation } from '@/hooks/useGeolocation';
 
