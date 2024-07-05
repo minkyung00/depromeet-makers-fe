@@ -5,7 +5,7 @@ import { api } from '@makers/api';
 import type { UseMutationOptions } from '@tanstack/react-query';
 import { useMutation } from '@tanstack/react-query';
 
-import type { ATTENDANCE_STATUS } from '../../../../apps/web/constants/attendance';
+import type { ATTENDANCE_STATUS } from '~/constants/attendance';
 
 // /v1/attendances/{attendanceId}
 

@@ -3,7 +3,7 @@ import { api } from '@makers/api';
 import type { UseQueryOptions } from '@tanstack/react-query';
 import { useQuery } from '@tanstack/react-query';
 
-import type { Attendance } from '@/types/attendance';
+import type { Attendance } from '~/types/attendance';
 
 interface AttendanceParams {
   generation: number;
