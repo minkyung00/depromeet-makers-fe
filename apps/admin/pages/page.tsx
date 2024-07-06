@@ -1,16 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { BottomNav, IconButton, Layout } from '@makers/ui';
 import { m } from 'framer-motion';
 import styled from 'styled-components';
 
-import { BottomNav } from '@/components/BottomNav';
-import IconButton from '@/components/Button/IconButton';
-import Layout from '@/components/Layout';
-import { ATTENDANCE_STATUS } from '../../../apps/web/constants/attendance';
-import { ADMIN_NAV_ITEMS } from '@/constants/bottomNav';
-import TeamSelect from '../../../apps/web/features/admin/attendance/TeamSelect';
-import UserItem from '../../../apps/web/features/admin/attendance/UserItem';
-import WeekSelect from '../../../apps/web/features/admin/attendance/WeekSelect';
-import { useGetGroupAttendance } from '@/hooks/apis/attendance/useGetGroupAttendance';
+import TeamSelect from '~/features/attendance/TeamSelect';
+import UserItem from '~/features/attendance/UserItem';
+import WeekSelect from '~/features/attendance/WeekSelect';
+import { useGetGroupAttendance } from '~/hooks/apis/useGetGroupAttendance';
 
 function AdminAttendancePage() {
   const { ref, isViewMiniHeader } = useScrollAction();
@@ -45,7 +41,12 @@ function AdminAttendancePage() {
         )}
         <UserSection ref={ref}>{data?.map((data) => <UserItem key={data.memberId} {...data} />)}</UserSection>
       </Main>
-      <BottomNav items={ADMIN_NAV_ITEMS} />
+      <BottomNav
+        items={[
+          { text: '출석현황', icon: 'team', path: '/admin/attendance' },
+          { text: '증빙', icon: 'paper', path: '#' },
+        ]}
+      />
     </Layout>
   );
 }
@@ -125,71 +126,3 @@ const UserSection = styled.section`
     border-top: 1px solid ${({ theme }) => theme.color.gray_200};
   }
 `;
-
-const DUMMY_DATA: {
-  id: number;
-  name: string;
-  position: string;
-  status: ATTENDANCE_STATUS;
-}[] = [
-  {
-    id: 1,
-    name: '김민수',
-    position: '개발자',
-    status: ATTENDANCE_STATUS.출석대기,
-  },
-  {
-    id: 2,
-    name: '홍길동',
-    position: '디자이너',
-    status: ATTENDANCE_STATUS.지각,
-  },
-  {
-    id: 3,
-    name: '이영희',
-    position: '디자이너',
-    status: ATTENDANCE_STATUS.출석,
-  },
-  {
-    id: 4,
-    name: '박철수',
-    position: '디자이너',
-    status: ATTENDANCE_STATUS.결석,
-  },
-  {
-    id: 5,
-    name: '김지영',
-    position: '디자이너',
-    status: ATTENDANCE_STATUS.출석대기,
-  },
-  {
-    id: 6,
-    name: '이승호',
-    position: '디자이너',
-    status: ATTENDANCE_STATUS.출석대기,
-  },
-  {
-    id: 7,
-    name: '박지민',
-    position: '디자이너',
-    status: ATTENDANCE_STATUS.출석대기,
-  },
-  {
-    id: 8,
-    name: '박지민',
-    position: '디자이너',
-    status: ATTENDANCE_STATUS.출석대기,
-  },
-  {
-    id: 9,
-    name: '박지민',
-    position: '디자이너',
-    status: ATTENDANCE_STATUS.출석대기,
-  },
-  {
-    id: 10,
-    name: '박지민',
-    position: '디자이너',
-    status: ATTENDANCE_STATUS.출석대기,
-  },
-];

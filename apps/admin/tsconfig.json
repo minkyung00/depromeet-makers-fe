@@ -1,0 +1,11 @@
+{
+  "extends": "@makers/typescript-config/nextjs.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@makers/ui/*": ["./*"],
+      "~/*": ["./*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "@types"],
+}
