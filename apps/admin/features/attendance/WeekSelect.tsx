@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BottomSheet, Icon } from '@makers/ui';
+import { BottomSheet, ChipLine, Icon } from '@makers/ui';
 import { domMax, LazyMotion } from 'framer-motion';
 import styled, { useTheme } from 'styled-components';
 

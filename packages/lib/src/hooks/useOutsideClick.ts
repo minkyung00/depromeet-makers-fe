@@ -10,7 +10,7 @@ type UseOutsideClickProps = {
  * @param ref
  * @param handler 클릭 이벤트가 발생했을 때 실행되는 함수입니다.
  */
-export const useOutsideClick = ({ ref, handler }: UseOutsideClickProps) {
+export const useOutsideClick = ({ ref, handler }: UseOutsideClickProps) => {
   useEffect(() => {
     const listener = (event: MouseEvent) => {
       if (!ref.current || ref.current.contains(event.target as Node)) {
@@ -24,5 +24,4 @@ export const useOutsideClick = ({ ref, handler }: UseOutsideClickProps) {
       document.removeEventListener('mousedown', listener);
     };
   });
-}
-
+};
