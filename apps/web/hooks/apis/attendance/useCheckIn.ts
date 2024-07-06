@@ -1,10 +1,10 @@
 import type { CustomError } from '@makers/api';
 import { api } from '@makers/api';
+import { useGeolocation } from '@makers/lib';
 import type { UseMutationOptions } from '@tanstack/react-query';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
-import { useSnackBar } from '@/components/SnackBar/useSnackBar';
-import { useGeolocation } from '@/hooks/useGeolocation';
+import { useSnackBar } from '~/components/SnackBar/useSnackBar';
 
 interface CheckInResponse {
   code: string;
