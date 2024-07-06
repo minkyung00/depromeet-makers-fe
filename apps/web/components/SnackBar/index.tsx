@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import type { SnackBarProps } from '@/store/snackBar';
+import type { SnackBarProps } from '~/store/snackBar';
 
-import Icon from '../Icon';
+// import Icon from '../Icon';
 
 export const SnackBar = ({ id, message, showClose, onClose, ...props }: SnackBarProps) => {
   const handleClose = () => {
@@ -12,7 +12,7 @@ export const SnackBar = ({ id, message, showClose, onClose, ...props }: SnackBar
   return (
     <SnackBarStyled showClose={showClose} onClick={handleClose} {...props}>
       {message}
-      {showClose && <Icon name="x-icon" />}
+      {/* {showClose && <Icon name="x-icon" />} */}
     </SnackBarStyled>
   );
 };
