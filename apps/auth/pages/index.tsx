@@ -3,7 +3,6 @@ import type { GetServerSideProps } from 'next';
 import { cookieStringToObject } from '@makers/lib';
 import { useFunnel } from '@makers/lib';
 
-import { Metadata } from '~/components/Metadata';
 import { COOKIE_KEY } from '~/constants/cookie';
 import CertifyStep from '~/features/login/CertifyStep';
 import EmailStep from '~/features/login/EmailStep';
@@ -43,8 +42,6 @@ function LoginPage() {
 
   return (
     <div>
-      <Metadata />
-
       <Funnel>
         <Step name={STEP.WELCOME}>
           <WelcomeStep onNext={() => setStep(STEP.EMAIL)} />
